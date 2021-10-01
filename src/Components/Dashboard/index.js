@@ -16,24 +16,26 @@ const Dashboard = () => {
       <Button onClick={() => history.push("/cart")} variant="contained">
         Carrinho de compras
       </Button>
-      <h1>Produtos em oferta</h1>
-      <ul className="productsBox">
-        {products.map((prd, index) => {
-          return (
-            <li key={index}>
-              <img alt={prd.name} src={prd.img} />
-              <h3>{prd.name} </h3>
-              <h2>R${prd.price} </h2>
-              <Button
-                onClick={() => dispatch(addToCartThunk(prd))}
-                variant="outlined"
-              >
-                Adicionar ao carrinho
-              </Button>
-            </li>
-          );
-        })}
-      </ul>
+      <div className="productsBox">
+        <h1>Escolha já seu pokémon!</h1>
+        <ul className="productsBox__pokemons">
+          {products.map((prd, index) => {
+            return (
+              <li key={index}>
+                <img alt={prd.name} src={prd.img} />
+                <h3>{prd.name} </h3>
+                <h2>R${prd.price} </h2>
+                <Button
+                  onClick={() => dispatch(addToCartThunk(prd))}
+                  variant="outlined"
+                >
+                  Adicionar ao carrinho
+                </Button>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </div>
   );
 };

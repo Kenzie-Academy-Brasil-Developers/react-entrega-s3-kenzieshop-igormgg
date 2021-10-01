@@ -1,18 +1,41 @@
+.productsContainer {
+  padding-top: 20px;
+  background-color: #ffde00;
+  border-radius: 30px;
+}
+
 .productsBox {
+  max-width: 1200px;
+  margin-top: 20px;
+  padding-top: 10px;
+  background-color: #b3a125;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 1);
+  border-radius: 30px;
+  border: 1px solid rgb(0, 0, 0, 0.3);
+}
+
+.productsBox h1 {
+  font-size: calc(16px + 5vmin);
+  color: #ff0000;
+  text-shadow: 2px 2px 2px black;
+}
+
+.productsBox__pokemons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.productsBox li {
-  width: 200px;
+.productsBox__pokemons li {
+  width: calc(100% / 5);
   margin: 10px;
   padding: 10px;
   background-color: rgb(238, 238, 238);
   border-radius: 10px;
+  box-sizing: border-box;
 }
 
-.productsBox img {
+.productsBox__pokemons img {
   width: 100%;
   background-color: white;
 }

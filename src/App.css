@@ -1,5 +1,10 @@
+html {
+  background-color: #3b4cca;
+}
+
 .App {
   text-align: center;
+  font-family: roboto;
 }
 
 .App-header {
@@ -10,4 +15,9 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+main {
+  display: flex;
+  justify-content: center;
 }
