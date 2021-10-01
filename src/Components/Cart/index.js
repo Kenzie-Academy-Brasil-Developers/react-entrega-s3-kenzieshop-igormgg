@@ -18,43 +18,47 @@ const Cart = () => {
 
   if (cart.length === 0) {
     return (
-      <div>
-        <h2>Sem produtos no carrinho =(</h2>
+      <div className="emptyCartContainer">
         <Button onClick={() => history.push("/")} variant="contained">
-          Ir às compras!
+          Comprar um pokémon!
         </Button>
+        <div>
+          <h2>Sem pokémons no carrinho =(</h2>
+        </div>
       </div>
     );
   }
 
   return (
     <div className="cartContainer">
-      <h1>Carrinho de compras</h1>
       <Button onClick={() => history.push("/")} variant="contained">
-        Voltar às compras!
+        Voltar ao PokéMart!
       </Button>
-      <div>
-        <h5>Atualmente você tem {cart.length} pokémons no carrinho </h5>
-        <h4>Seus pokémons custaram:</h4>
+      <div className="cartSummary">
+        <h5>Atualmente você tem {cart.length} pokémons no carrinho. </h5>
+        <h4>Seus pokémons custam:</h4>
         <h3>R${totalPrice}</h3>
       </div>
-      <ul className="cartBox">
-        {cart.map((prd, index) => {
-          return (
-            <li key={index}>
-              <img alt={prd.name} src={prd.img} />
-              <h3>{prd.name} </h3>
-              <h2>R${prd.price} </h2>
-              <Button
-                onClick={() => dispatch(removeFromCartThunk(prd))}
-                variant="outlined"
-              >
-                Remover do carrinho
-              </Button>
-            </li>
-          );
-        })}
-      </ul>
+      <div className="cartBox">
+        <h1>PokéCart!</h1>
+        <ul className="cartBox__pokemons">
+          {cart.map((prd, index) => {
+            return (
+              <li key={index}>
+                <img alt={prd.name} src={prd.img} />
+                <h3>{prd.name} </h3>
+                <h2>R${prd.price} </h2>
+                <Button
+                  onClick={() => dispatch(removeFromCartThunk(prd))}
+                  variant="outlined"
+                >
+                  Remover do carrinho
+                </Button>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </div>
   );
 };

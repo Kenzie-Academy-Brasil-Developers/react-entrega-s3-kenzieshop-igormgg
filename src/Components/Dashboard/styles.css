@@ -1,11 +1,16 @@
 .productsContainer {
+  width: 100%;
+  max-width: 1200px;
   padding-top: 20px;
   background-color: #ffde00;
   border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .productsBox {
-  max-width: 1200px;
+  width: 95%;
   margin-top: 20px;
   padding-top: 10px;
   background-color: #b3a125;
@@ -18,6 +23,7 @@
   font-size: calc(16px + 5vmin);
   color: #ff0000;
   text-shadow: 2px 2px 2px black;
+  font-weight: bold;
 }
 
 .productsBox__pokemons {
@@ -38,4 +44,21 @@
 .productsBox__pokemons img {
   width: 100%;
   background-color: white;
+}
+
+.productsBox__pokemons h3 {
+  font-size: calc(5px + 1vmin);
+  margin-top: 3px;
+}
+
+.productsBox__pokemons h2 {
+  font-size: calc(7px + 1vmin);
+  font-weight: bold;
+  margin-top: 3px;
+}
+
+.productsBox__pokemons button {
+  font-size: calc(3px + 1vmin);
+  width: 100%;
+  margin-top: 3px;
 }

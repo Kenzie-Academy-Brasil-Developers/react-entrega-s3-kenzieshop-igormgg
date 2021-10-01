@@ -14,10 +14,10 @@ const Dashboard = () => {
   return (
     <div className="productsContainer">
       <Button onClick={() => history.push("/cart")} variant="contained">
-        Carrinho de compras
+        Ir para o PokéCart!
       </Button>
       <div className="productsBox">
-        <h1>Escolha já seu pokémon!</h1>
+        <h1>PokéMart!</h1>
         <ul className="productsBox__pokemons">
           {products.map((prd, index) => {
             return (

@@ -1,19 +1,111 @@
+.emptyCartContainer {
+  width: 100%;
+  max-width: 1200px;
+  padding-top: 20px;
+  background-color: #ffde00;
+  border-radius: 30px;
+}
+
+.emptyCartContainer div {
+  height: 80%;
+  margin-top: 20px;
+  padding-top: 10px;
+  background-color: #b3a125;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 1);
+  border-radius: 30px;
+  border: 1px solid rgb(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.emptyCartContainer h2 {
+  font-size: calc(16px + 5vmin);
+  color: #ff0000;
+  text-shadow: 2px 2px 2px black;
+}
+
+.cartContainer {
+  width: 100%;
+  max-width: 1200px;
+  padding-top: 20px;
+  background-color: #ffde00;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cartSummary {
+  max-width: 200px;
+  background-color: #cc0000;
+  color: white;
+  padding: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px black;
+  border-radius: 8px;
+}
+
+.cartSummary h5 {
+  margin-bottom: 10px;
+}
+
+.cartSummary h3 {
+  margin-top: 3px;
+  font-size: 24px;
+}
+
 .cartBox {
+  width: 95%;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #b3a125;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 1);
+  border-radius: 30px;
+  border: 1px solid rgb(0, 0, 0, 0.3);
+}
+
+.cartBox h1 {
+  font-size: calc(16px + 5vmin);
+  color: #ff0000;
+  text-shadow: 2px 2px 2px black;
+  font-weight: bold;
+}
+
+.cartBox__pokemons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 1500px;
 }
 
-.cartBox li {
-  width: calc(100% / 10);
+.cartBox__pokemons li {
+  width: calc(100% / 3);
   margin: 10px;
   padding: 10px;
   background-color: rgb(238, 238, 238);
   border-radius: 10px;
 }
 
-.cartBox img {
+.cartBox__pokemons img {
   width: 100%;
   background-color: white;
+}
+
+.cartBox__pokemons h3 {
+  font-size: calc(10px + 1vmin);
+  margin-top: 3px;
+}
+
+.cartBox__pokemons h2 {
+  font-size: calc(12px + 1vmin);
+  font-weight: bold;
+  margin-top: 3px;
+}
+
+.cartBox__pokemons button {
+  font-size: calc(5px + 1vmin);
+  width: 100%;
+  margin-top: 3px;
 }
